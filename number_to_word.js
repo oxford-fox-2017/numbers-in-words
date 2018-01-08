@@ -1,20 +1,15 @@
 function in_words(num){
-    let digit = [[''],['satu'],['dua'],['tiga'],['empat'],['lima'],['enam'],['tujuh'],['delapan'],['sembilan'],['sepuluh'],['sebelas']];
-    if( num < 12){
-        return digit[num].toString();
-    }else if ( num < 20 ){
-        return digit[num.toString()[1]].toString() + ' belas ';
-    }else if ( num < 100){
-        return digit[num.toString()[0]].toString() + ' puluh ' + digit[num.toString()[1]].toString(); 
-    }else if ( num === 100){
-        return 'seratus';
-    }else if ( num < 200){
-        return 'seratus ' + digit[num.toString()[1]].toString() + ' puluh ' + digit[num.toString()[2]].toString();
+    let satuan = ['', 'satu', 'dua', 'tiga', 'empat', 'lima', 'enam', 'tujuh', 'delapan', 'sembilan','sepuluh','sebelas'];
+    let puluhan = ['belas', 'puluh', ''];
+
+    let temp = '';
+
+    if ( num < 12){
+        return satuan[num];
+    }else if ( num >=12 || num <=19){
+        return satuan[num.toString()[1]] + ' ' + puluhan[0];
     }
-    else if ( num < 1000){
-        return digit[num.toString()[0]].toString() + ' ratus ' + digit[num.toString()[1]].toString() + ' puluh ' + digit[num.toString()[2]].toString(); 
-    }
-    
 }
 
-console.log(in_words(999));
+
+console.log(in_words(12));
