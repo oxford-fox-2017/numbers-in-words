@@ -18,7 +18,10 @@ function in_words(angka){
         return totalAngka == 1 ? ANGKA_UTAMA[angka] : ANGKA_UTAMA_GABUNGAN[arrStringAngka[1]] + IMBUHAN[1];
     }
     else{
-        var result1 = ANGKA_UTAMA_GABUNGAN[arrStringAngka[0]] + IMBUHAN[totalAngka];
+        // untuk handle (satu juta, satu miliar, dan satu triliun)
+        var angka1 = arrStringAngka.length === 7 || arrStringAngka.length === 10 || arrStringAngka.length == 13 ? 
+                    ANGKA_UTAMA[arrStringAngka[0]] : ANGKA_UTAMA_GABUNGAN[arrStringAngka[0]];
+        var result1 = angka1 + IMBUHAN[totalAngka];
 
         arrStringAngka.shift();
         var newAngka = parseInt(arrStringAngka.join(''));
@@ -37,3 +40,7 @@ console.log(in_words(111)); // seratus sebelas
 
 console.log(in_words(38079)); // tiga puluh delapan ribu tujuh puluh sembilan
 console.log(in_words(82102713)); // delapan puluh dua juta seratus dua ribu tujuh ratus tiga belas
+
+console.log(in_words(1000000)); // satu juta
+console.log(in_words(1000000000)); // satu milliar
+console.log(in_words(1000000000000)); // satu trilliun
