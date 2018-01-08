@@ -1,5 +1,12 @@
 /*
-buat kamus kata angka
+buat function in_words dengan parameter integer
+buat kamus kata angka terdiri dari satuan, puluhan, ratusan
+set kata sebagai string kosong
+jika integer > 999 return 'angka terlalu besar'
+jika integer<20 tambahkan satuan[integer] kedalam kata
+jika integer<100 tambahkan puluhan [integer/10 lalu bulatkan kebawah] + satuan[integer] kedalam kata
+jika integer<1000 tambahkan ratusan [integer/100 bulatkan kebawah] + puluhan [integer/110 lalu bulatkan kebawah] + satuan[integer] kedalam kata
+return kata
 */
 
 function in_words(integer){
