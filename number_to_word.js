@@ -11,8 +11,19 @@ function in_words(num){
         return 'Seratus ' + in_words(num %100);
     }else if ( num >= 200 && num <= 999){
         return in_words(Math.floor(num/100)) + ' Ratus ' + in_words(Math.floor(num/10));
+    }else if ( num >= 1000 && num <= 1999){
+        return 'Seribu ' + in_words(num%1000);
+    }else if ( num >= 2000 && num <= 999999){
+        return in_words(Math.floor(num/1000)) + ' Ribu ' + in_words(Math.floor(num%1000));
+    }else if ( num >= 1000000 && num <= 999999999){
+        return in_words(Math.floor(num/1000000)) + ' Juta ' + in_words(Math.floor(num%1000000));
+    }else if  ( num >= 1000000000 && num <= 999999999999){
+        return in_words(Math.floor(num/1000000000)) + ' Miliyar ' + in_words(Math.floor(num%1000000000));
+    }else if ( num >= 1000000000000 && num <= 999999999999999){
+        return in_words(Math.floor(num/1000000000000)) + ' Triliun ' + in_words(Math.floor(num%1000000000000));
     }
+
 }
 
 
-console.log(in_words(999));
+console.log(in_words(1000000000002));
