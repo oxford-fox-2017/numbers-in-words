@@ -17,13 +17,12 @@ const inwords = (angka) => {
         } else {
             depan += amplifier2[angkastring.length]
         }
-        if (angkastring.length < 7 && depan.slice(0,5) === "satu ") depan = depan.replace("satu ", "se");
-        
         if (+angkastring.slice(0,2) < 20 && angkastring.length%3 === 2) {
           depan = early[+angkastring.slice(0,2)] + ' ' + amplifier[angkastring.length-1]
           return depan + ' ' + inwords(+angkastring.slice(2))
          }
-         
+         if (angkastring.length < 7 && depan.slice(0,5) === "satu ") depan = depan.replace("satu ", "se");
+         if (depan.slice(0,10) === "satu ratus") depan = depan.replace("satu ratus", "seratus"); 
         return depan + ' ' + inwords(+angkastring.slice(1))
     }
     
