@@ -26,4 +26,4 @@ function inWords(input){
 
 }
 
-console.log(inWords(895000))
+console.log(inWords(999999999999999))
