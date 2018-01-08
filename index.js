@@ -14,8 +14,16 @@ function inWords(input){
         return inWords(Math.floor(input/100)) +' ratus '+ inWords(input%100)
     }else if (input < 2000){
         return 'seribu ' + inWords(input%1000)
+    }else if (input < 1000000){
+        return inWords(Math.floor(input/1000)) + ' ribu ' + inWords(input%1000)
+    }else if (input < 1000000000){
+        return inWords(Math.floor(input / 1000000)) + ' juta ' + inWords(input % 1000000)
+    } else if (input < 1000000000000){
+        return inWords(Math.floor(input / 1000000000)) + ' miliar ' + inWords(input % 1000000000)
+    } else if (input < 1000000000000000){
+        return inWords(Math.floor(input / 1000000000000)) + ' triliun ' + inWords(input % 1000000000000)
     }
 
 }
 
-console.log(inWords(999))
+console.log(inWords(895000))
