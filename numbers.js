@@ -24,6 +24,8 @@ function in_words(num){
     return `seratus ${in_words(num-Math.floor(num/100)*100)}`
   } else if(num< 1000){
     return `${angka[Math.floor(num/100)]} ratus ${in_words(num-Math.floor(num/100)*100)}`
+  } else if(num < 2000){
+    return `seribu ${in_words(num-Math.floor(num/100)*100)}`
   } else if(num < 1000000){
     return `${in_words([Math.floor(num/1000)])} ribu ${in_words(num-Math.floor(num/1000)*1000)}`
   } else if(num < 1000000000){
@@ -35,4 +37,4 @@ function in_words(num){
   }
 }
 
-console.log(in_words(999000000000000));
+console.log(in_words(1232));
