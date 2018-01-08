@@ -28,15 +28,33 @@ const in_words = (num) => {
     }
   } else if (num < 2000) {
     if (num % 1000 !== 0) {
-      return in_words((num - (num % 1000)) / 1000) + ' ribu ' + in_words(num % 1000);
+      return 'seribu ' + in_words(num % 1000);
     } else {
-      return in_words((num - (num % 1000)) / 1000) + ' ribu';
+      return 'seribu';
     }
   } else if (num < 1000000) {
     if (num % 1000 !== 0) {
       return in_words((num - (num % 1000)) / 1000) + ' ribu ' + in_words(num % 1000);
     } else {
       return in_words((num - (num % 1000)) / 1000) + ' ribu';
+    }
+  } else if (num < 1000000000) {
+    if (num % 1000000 !== 0) {
+      return in_words((num - (num % 1000000)) / 1000000) + ' juta ' + in_words(num % 1000000);
+    } else {
+      return in_words((num - (num % 1000000)) / 1000000) + ' juta';
+    }
+  } else if (num < 1000000000000) {
+    if (num % 1000000000 !== 0) {
+      return in_words((num - (num % 1000000000)) / 1000000000) + ' milyar ' + in_words(num % 1000000000);
+    } else {
+      return in_words((num - (num % 1000000000)) / 1000000000) + ' milyar';
+    }
+  } else if (num < 1000000000000000) {
+    if (num % 1000000000000 !== 0) {
+      return in_words((num - (num % 1000000000000)) / 1000000000000) + ' trilyun ' + in_words(num % 1000000000000);
+    } else {
+      return in_words((num - (num % 1000000000000)) / 1000000000000) + ' trilyun';
     }
   }
 }
@@ -47,3 +65,10 @@ console.log(in_words(90));
 console.log(in_words(199));
 console.log(in_words(230));
 console.log(in_words(999));
+console.log(in_words(120000));
+console.log(in_words(12000000));
+console.log(in_words(999999999));
+console.log(in_words(123476547000));
+console.log(in_words(999999999999));
+console.log(in_words(123456789012345));
+console.log(in_words(999999999999999));
