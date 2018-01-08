@@ -18,9 +18,9 @@ function numberWord(jumlah){
     }else if(jumlah>=1000000&&jumlah<1000000000){
         return numberWord(Math.floor(jumlah/1000000))+satuan[4]+ numberWord(jumlah%1000000)
     }else if(jumlah>=1000000000&&jumlah<1000000000000){
-    return numberWord(Math.floor(jumlah/1000000000))+satuan[5]+ numberWord(jumlah%1000000000)
+        return numberWord(Math.floor(jumlah/1000000000))+satuan[5]+ numberWord(jumlah%1000000000)
     }else if(jumlah>=1000000000000&&nujumlahmber<1000000000000000){
-    return numberWord(Math.floor(jumlah/1000000000000))+satuan[6]+ numberWord(jumlah%1000000000000)
+        return numberWord(Math.floor(jumlah/1000000000000))+satuan[6]+ numberWord(jumlah%1000000000000)
     }
 }
 console.log(numberWord(99900000))
