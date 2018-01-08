@@ -28,7 +28,7 @@ function in_words(num) {
 	
 	// 20 - 99
 	if(num > 19 && num < 100) {
-		for(var i = 9; i > 1; i--) {
+		for(var i = 9; i > 1; i--) { 
 			if( (num / (i * 10)) > 1 ){
 				temp = i;
 				num = num - (i * 10);
