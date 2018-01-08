@@ -1,3 +1,6 @@
+'uses strict'
+
+// recursive
 function in_words(number) {
   let kata   = ['','satu','dua','tiga','empat','lima','enam','tujuh','delapan','sembilan', 'sepuluh', 'sebelas'];
 
