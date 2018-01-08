@@ -35,4 +35,4 @@ console.log(in_words(27)); // dua puluh tujuh
 console.log(in_words(102)); // seratus dua
 console.log(in_words(38079)); // tiga puluh delapan ribu tujuh puluh sembilan
 console.log(in_words(82102713)); // delapan puluh dua juta seratus dua ribu tujuh ratus tiga belas
-// console.log(in_words(999000000000000)); // sembilan ratus sembilan puluh sembilan triliun
+console.log(in_words(999000000000000)); // sembilan ratus sembilan puluh sembilan triliun
