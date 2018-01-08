@@ -26,14 +26,14 @@ function in_words(integer){
         kata+= puluhan[Math.floor(integer/10)] +' '+ satuan[integer % 10];
     }
     else if(integer<1000){
-        kata+=ratusan[Math.floor(integer/100)]+' '+puluhan[Math.floor(integer/110)]+' '+ satuan[integer %10];
+        kata+=ratusan[Math.floor(integer/100)]+' '+ in_words(integer % 100);
     }
     return kata;
 }
 
 console.log(in_words(4));
 console.log(in_words(27));
-console.log(in_words(102));
+console.log(in_words(324));
 console.log(in_words(38079));
 console.log(in_words(82102713));
 
