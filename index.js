@@ -11,6 +11,16 @@ function numberWord(jumlah){
         return nominal[12]+numberWord(jumlah-100)
     }else if(jumlah>200&&jumlah<1000){
         return nominal[Math.floor(jumlah/100)]+satuan[2]+numberWord(Math.floor(jumlah%100))
+    }else if(jumlah>1000&&jumlah<2000){
+        return nominal[13]+numberWord(jumlah-1000)
+    }else if(jumlah>2000&&jumlah<1000000){
+        return numberWord(Math.floor(jumlah/1000))+satuan[3]+numberWord(Math.floor(jumlah%1000))
+    }else if(jumlah>=1000000&&jumlah<1000000000){
+        return numberWord(Math.floor(jumlah/1000000))+satuan[4]+ numberWord(jumlah%1000000)
+    }else if(jumlah>=1000000000&&jumlah<1000000000000){
+    return numberWord(Math.floor(jumlah/1000000000))+satuan[5]+ numberWord(jumlah%1000000000)
+    }else if(jumlah>=1000000000000&&nujumlahmber<1000000000000000){
+    return numberWord(Math.floor(jumlah/1000000000000))+satuan[6]+ numberWord(jumlah%1000000000000)
     }
 }
-console.log(numberWord(233))
+console.log(numberWord(99900000))
