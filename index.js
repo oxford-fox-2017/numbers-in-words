@@ -18,7 +18,7 @@ function convertCoin(uang){
         i = uang
     }
 
-    console.log(coin)
+    return coin
 
 }
 
