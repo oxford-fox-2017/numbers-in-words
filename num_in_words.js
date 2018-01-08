@@ -13,6 +13,7 @@ function in_words(integer){
     'dua belas','tiga belas','empat belas','lima belas','enam belas','tujuh belas','delapan belas','sembilan belas'];
     const puluhan = ['','','dua puluh', 'tiga puluh','empat puluh','lima puluh','enam puluh','tujuh puluh','delapan puluh','sembilan puluh'];
     const ratusan = ['','seratus','dua ratus','tiga ratus','empat ratus','lima ratus','enam ratus','tujuh ratus','delapan ratus','sembilan ratus'];
+    const millions = ['','seribu','puluh ribu','ratus ribu','juta','milyar','triliun'];
     let kata ='';
 
     if(integer>999){
